@@ -16,10 +16,11 @@ function playGame() {
     if(game.IsNumerOfRoundsValid(temp))
        */
     var temp =window.prompt('Enter number of rounds (1-5)');
-    while(!game.isNumerOfRoundsValid(temp)){
+    while(!game.isNumberOfRoundsValid(temp)){
         temp =window.prompt('Enter number of rounds (1-5)');
     }
     var numberOfRounds=temp;
+    
       // 
    // else playGame();
     
