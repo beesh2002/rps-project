@@ -9,20 +9,29 @@ function playGame() {
     
     //*********************************ADD CODE HERE *************************************/
     // Get the number of rounds from the user, and store it in a variable called numberOfRounds.
-    var numberOfRounds=window.prompt('Enter number of rounds (1-5)'); 
+   /* var temp =window.prompt('Enter number of rounds (1-5)'); 
 
-    // Use game.IsNumerOfRoundsValid() to validate the user input.
+     //Use game.IsNumerOfRoundsValid() to validate the user input.
+     var numberOfRounds =0;
+    if(game.IsNumerOfRoundsValid(temp))
+       */
+    var temp =window.prompt('Enter number of rounds (1-5)');
+    while(!game.IsNumerOfRoundsValid(temp)){
+        temp =window.prompt('Enter number of rounds (1-5)');
+    }
+    var numberOfRounds=temp;
+      // 
+   // else playGame();
     
-    if(true)
-        game.setNumberOfRounds(numberOfRounds);
-    else playGame();
+  /*      game.setNumberOfRounds(numberOfRounds);
+    else playGame();*/
     // If the input is valid, use game.setNumberOfRounds(numberOfRounds) to set the number of rounds for the game 
     //  >> Else, try to get the number of rounds for the suer again
 
 
     //*********************************ADD CODE HERE *************************************/
     // Call playRound() with a parameter of the round count (1 thru numberOfRounds) for each round 
-    while (numberOfRounds!=0)
+    while (numberOfRounds>0)
     {
         playRound(numberOfRounds)
         numberOfRounds--
@@ -50,12 +59,10 @@ function playRound(roundNumber) {
     var outcome = round.determineWinner();
     if(outcome== Outcomes.COMPUTER_WINS)
         game.incrementComputerWins();
-
 else    if(outcome== Outcomes.PLAYER_WINS)
         game.incrementPlayerWins();
-else   if(outcome== Outcomes.TIE)
-        game.incrementCountOfTies()
-    
+else    game.incrementCountOfTies()
+       
     
     //*********************************ADD CODE HERE *************************************/
     // Display the Round Results from the properties stored in the Round object
@@ -72,8 +79,8 @@ function getPlayerSelection() {
     
     //*********************************ADD CODE HERE *************************************/
     // Prompt, Validate and Return the player selection. This must be in the form of "rock", "paper", or "scissors" exactly
-    let playerSelection = "";
-    let selectionArray = Object.values(Selections);
+    var playerSelection = "";
+    var selectionArray = Object.values(Selections);
 
     do {
         playerSelection = window.prompt('Enter rock, paper or scissors')

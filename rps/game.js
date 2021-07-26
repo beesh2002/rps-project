@@ -5,11 +5,11 @@ class Game{
         this.countOfComputerWins = 0;
         this.countOfTies = 0;
     }
-    incrementPlayerWins(){                   this.countOfPlayerWins=+1;            }
+    incrementPlayerWins(){                   this.countOfPlayerWins++;            }
 
-    incrementComputerWins(){                 this.countOfComputerWins=+1;          }
+    incrementComputerWins(){                 this.countOfComputerWins++;          }
 
-    incrementCountOfTies(){                  this.countOfTies=+1;                  }
+    incrementCountOfTies(){                  this.countOfTies++;                  }
 
     setNumberOfRounds(numberOfRounds){       this.numberOfRounds=numberOfRounds;   }
 
@@ -25,7 +25,7 @@ class Game{
      * tests the numberOfRounds global variable and determines if it is a valid value
      * @returns boolean
      */
-      IsNumerOfRoundsValid(num) {       return (num=1? true:(num=2? true:(num=3?true:(num=4?true:(num=5?true:false)))));   }
+      IsNumerOfRoundsValid(num) {  return (num==1? true:(num==2? true:(num==3?true:(num==4?true:(num==5?true:false)))));   }
 }
 
 
