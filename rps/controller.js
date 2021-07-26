@@ -4,10 +4,12 @@ var game = new Game();
 // main entry point
 function playGame() {
     //*********************************ADD CODE HERE *************************************/
-    // Call the function game.newGame() to reset the counts.
+    game.newGame();// Call the function game.newGame() to reset the counts.
 
     //*********************************ADD CODE HERE *************************************/
     // Get the number of rounds from the user, and store it in a variable called numberOfRounds.
+    
+
     // Use game.IsNumerOfRoundsValid() to validate the user input.
     // If the input is valid, use game.setNumberOfRounds(numberOfRounds) to set the number of rounds for the game 
     //  >> Else, try to get the number of rounds for the suer again

@@ -29,6 +29,8 @@ class Round{
     getComputerSelection() {
         //*********************************ADD CODE HERE *************************************/
         // Use Math.floor and select a random Selections enumerator from above 
+        let arr = Object.values(Selections);
+        return arr[Math.floor(Math.random()*3)];
     }
 
     /**
