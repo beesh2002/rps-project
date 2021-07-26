@@ -25,7 +25,7 @@ class Game{
      * tests the numberOfRounds global variable and determines if it is a valid value
      * @returns boolean
      */
-     isNumberOfRoundsValid(num) {       return (num=1? true:(num=2? true:(num=3?true:(num=4?true:(num=5?true:false)))));   }
+      IsNumerOfRoundsValid(num) {       return (num=1? true:(num=2? true:(num=3?true:(num=4?true:(num=5?true:false)))));   }
 }
 
 
